@@ -1,7 +1,6 @@
 #include "ros/ros.h"
 #include <sensor_msgs/Image.h>
 #include <std_msgs/Header.h>
-
 void depthCallback(const sensor_msgs::ImageConstPtr& msg)
 {
     ROS_INFO("Received depth image");
