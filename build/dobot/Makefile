@@ -101,6 +101,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +134,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-dobot/CMakeFiles/DoBot.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DoBot.dir/rule
-.PHONY : dobot/CMakeFiles/DoBot.dir/rule
-
-# Convenience name for target.
-DoBot: dobot/CMakeFiles/DoBot.dir/rule
-
-.PHONY : DoBot
-
-# fast build rule for target.
-DoBot/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/DoBot.dir/build.make dobot/CMakeFiles/DoBot.dir/build
-.PHONY : DoBot/fast
-
-# Convenience name for target.
 dobot/CMakeFiles/mytest.dir/rule:
 	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/mytest.dir/rule
 .PHONY : dobot/CMakeFiles/mytest.dir/rule
@@ -211,6 +196,66 @@ yolo: dobot/CMakeFiles/yolo.dir/rule
 yolo/fast:
 	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/yolo.dir/build.make dobot/CMakeFiles/yolo.dir/build
 .PHONY : yolo/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_genpy.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_genpy.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_genpy.dir/rule
+
+# Convenience name for target.
+dobot_genpy: dobot/CMakeFiles/dobot_genpy.dir/rule
+
+.PHONY : dobot_genpy
+
+# fast build rule for target.
+dobot_genpy/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_genpy.dir/build.make dobot/CMakeFiles/dobot_genpy.dir/build
+.PHONY : dobot_genpy/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_gennodejs.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_gennodejs.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_gennodejs.dir/rule
+
+# Convenience name for target.
+dobot_gennodejs: dobot/CMakeFiles/dobot_gennodejs.dir/rule
+
+.PHONY : dobot_gennodejs
+
+# fast build rule for target.
+dobot_gennodejs/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_gennodejs.dir/build.make dobot/CMakeFiles/dobot_gennodejs.dir/build
+.PHONY : dobot_gennodejs/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+dobot_generate_messages_nodejs: dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
+
+.PHONY : dobot_generate_messages_nodejs
+
+# fast build rule for target.
+dobot_generate_messages_nodejs/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build
+.PHONY : dobot_generate_messages_nodejs/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+dobot_generate_messages_eus: dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
+
+.PHONY : dobot_generate_messages_eus
+
+# fast build rule for target.
+dobot_generate_messages_eus/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/build
+.PHONY : dobot_generate_messages_eus/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
@@ -258,6 +303,51 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
+dobot/CMakeFiles/dobot_gencpp.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_gencpp.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_gencpp.dir/rule
+
+# Convenience name for target.
+dobot_gencpp: dobot/CMakeFiles/dobot_gencpp.dir/rule
+
+.PHONY : dobot_gencpp
+
+# fast build rule for target.
+dobot_gencpp/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_gencpp.dir/build.make dobot/CMakeFiles/dobot_gencpp.dir/build
+.PHONY : dobot_gencpp/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
 	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
@@ -273,19 +363,34 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/dobot_gennodejs.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_gennodejs.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_gennodejs.dir/rule
+dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-dobot_gennodejs: dobot/CMakeFiles/dobot_gennodejs.dir/rule
+dobot_generate_messages_lisp: dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
 
-.PHONY : dobot_gennodejs
+.PHONY : dobot_generate_messages_lisp
 
 # fast build rule for target.
-dobot_gennodejs/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_gennodejs.dir/build.make dobot/CMakeFiles/dobot_gennodejs.dir/build
-.PHONY : dobot_gennodejs/fast
+dobot_generate_messages_lisp/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build
+.PHONY : dobot_generate_messages_lisp/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
@@ -331,6 +436,51 @@ std_msgs_generate_messages_eus: dobot/CMakeFiles/std_msgs_generate_messages_eus.
 std_msgs_generate_messages_eus/fast:
 	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/yolo_lib.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/yolo_lib.dir/rule
+.PHONY : dobot/CMakeFiles/yolo_lib.dir/rule
+
+# Convenience name for target.
+yolo_lib: dobot/CMakeFiles/yolo_lib.dir/rule
+
+.PHONY : yolo_lib
+
+# fast build rule for target.
+yolo_lib/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/yolo_lib.dir/build.make dobot/CMakeFiles/yolo_lib.dir/build
+.PHONY : yolo_lib/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_generate_messages_py.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dobot_generate_messages_py: dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
+
+.PHONY : dobot_generate_messages_py
+
+# fast build rule for target.
+dobot_generate_messages_py/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make dobot/CMakeFiles/dobot_generate_messages_py.dir/build
+.PHONY : dobot_generate_messages_py/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/roscpp_generate_messages_py.dir/rule:
@@ -453,6 +603,21 @@ dobot_geneus/fast:
 .PHONY : dobot_geneus/fast
 
 # Convenience name for target.
+dobot/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : dobot/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: dobot/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -468,19 +633,79 @@ roscpp_generate_messages_cpp/fast:
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/dobot_gencpp.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_gencpp.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_gencpp.dir/rule
+dobot/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : dobot/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-dobot_gencpp: dobot/CMakeFiles/dobot_gencpp.dir/rule
+sensor_msgs_generate_messages_lisp: dobot/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : dobot_gencpp
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # fast build rule for target.
-dobot_gencpp/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_gencpp.dir/build.make dobot/CMakeFiles/dobot_gencpp.dir/build
-.PHONY : dobot_gencpp/fast
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make dobot/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/DoBot.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DoBot.dir/rule
+.PHONY : dobot/CMakeFiles/DoBot.dir/rule
+
+# Convenience name for target.
+DoBot: dobot/CMakeFiles/DoBot.dir/rule
+
+.PHONY : DoBot
+
+# fast build rule for target.
+DoBot/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/DoBot.dir/build.make dobot/CMakeFiles/DoBot.dir/build
+.PHONY : DoBot/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : dobot/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: dobot/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : dobot/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: dobot/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_object.dir/rule:
@@ -513,6 +738,66 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+dobot/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : dobot/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: dobot/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_lib.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_lib.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_lib.dir/rule
+
+# Convenience name for target.
+dobot_lib: dobot/CMakeFiles/dobot_lib.dir/rule
+
+.PHONY : dobot_lib
+
+# fast build rule for target.
+dobot_lib/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_lib.dir/build.make dobot/CMakeFiles/dobot_lib.dir/build
+.PHONY : dobot_lib/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
 	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
@@ -541,141 +826,6 @@ dobot_generate_messages: dobot/CMakeFiles/dobot_generate_messages.dir/rule
 dobot_generate_messages/fast:
 	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages.dir/build.make dobot/CMakeFiles/dobot_generate_messages.dir/build
 .PHONY : dobot_generate_messages/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dobot_generate_messages_eus: dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
-
-.PHONY : dobot_generate_messages_eus
-
-# fast build rule for target.
-dobot_generate_messages_eus/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/build
-.PHONY : dobot_generate_messages_eus/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_genpy.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_genpy.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_genpy.dir/rule
-
-# Convenience name for target.
-dobot_genpy: dobot/CMakeFiles/dobot_genpy.dir/rule
-
-.PHONY : dobot_genpy
-
-# fast build rule for target.
-dobot_genpy/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_genpy.dir/build.make dobot/CMakeFiles/dobot_genpy.dir/build
-.PHONY : dobot_genpy/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dobot_generate_messages_lisp: dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
-
-.PHONY : dobot_generate_messages_lisp
-
-# fast build rule for target.
-dobot_generate_messages_lisp/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build
-.PHONY : dobot_generate_messages_lisp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dobot_generate_messages_nodejs: dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
-
-.PHONY : dobot_generate_messages_nodejs
-
-# fast build rule for target.
-dobot_generate_messages_nodejs/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build
-.PHONY : dobot_generate_messages_nodejs/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/yolo_lib.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/yolo_lib.dir/rule
-.PHONY : dobot/CMakeFiles/yolo_lib.dir/rule
-
-# Convenience name for target.
-yolo_lib: dobot/CMakeFiles/yolo_lib.dir/rule
-
-.PHONY : yolo_lib
-
-# fast build rule for target.
-yolo_lib/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/yolo_lib.dir/build.make dobot/CMakeFiles/yolo_lib.dir/build
-.PHONY : yolo_lib/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages_py.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dobot_generate_messages_py: dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
-
-.PHONY : dobot_generate_messages_py
-
-# fast build rule for target.
-dobot_generate_messages_py/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make dobot/CMakeFiles/dobot_generate_messages_py.dir/build
-.PHONY : dobot_generate_messages_py/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_lib.dir/rule:
-	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_lib.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_lib.dir/rule
-
-# Convenience name for target.
-dobot_lib: dobot/CMakeFiles/dobot_lib.dir/rule
-
-.PHONY : dobot_lib
-
-# fast build rule for target.
-dobot_lib/fast:
-	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_lib.dir/build.make dobot/CMakeFiles/dobot_lib.dir/build
-.PHONY : dobot_lib/fast
 
 src/DoBot.o: src/DoBot.cpp.o
 
@@ -801,17 +951,28 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
-	@echo "... DoBot"
 	@echo "... mytest"
 	@echo "... yolo"
+	@echo "... dobot_genpy"
+	@echo "... dobot_gennodejs"
+	@echo "... dobot_generate_messages_nodejs"
+	@echo "... dobot_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... bridge_yolo"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... dobot_gencpp"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... dobot_gennodejs"
+	@echo "... test"
+	@echo "... dobot_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... _dobot_generate_messages_check_deps_CV"
 	@echo "... std_msgs_generate_messages_eus"
+	@echo "... yolo_lib"
+	@echo "... dobot_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... dobot_genlisp"
@@ -822,22 +983,21 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... dobot_generate_messages_cpp"
 	@echo "... dobot_geneus"
+	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
-	@echo "... dobot_gencpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... DoBot"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... _dobot_generate_messages_check_deps_object"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... dobot_lib"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... dobot_generate_messages"
-	@echo "... dobot_generate_messages_eus"
-	@echo "... dobot_genpy"
-	@echo "... test"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... dobot_generate_messages_lisp"
-	@echo "... dobot_generate_messages_nodejs"
-	@echo "... yolo_lib"
-	@echo "... dobot_generate_messages_py"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... dobot_lib"
 	@echo "... src/DoBot.o"
 	@echo "... src/DoBot.i"
 	@echo "... src/DoBot.s"

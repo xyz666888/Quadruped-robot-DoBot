@@ -1,6 +1,9 @@
 #include "dobot/yolo.h"
 #include "ros/ros.h"
 #include "/home/human/dobot/devel/include/dobot/object.h"
+#include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/Image.h>
+#include <image_transport/image_transport.h>
 
 dobot:: object msg;
 ros::Publisher yolo;
@@ -122,6 +125,22 @@ void YOLO::detect(Mat& frame)
 	putText(frame, label, Point(0, 30), FONT_HERSHEY_SIMPLEX, 1, Scalar(0, 0, 255), 2);
 	//imwrite(format("%s_out.jpg", this->netname), frame);
 }
+YOLO yolo_model(yolo_nets[2]);
+cv_bridge::CvImagePtr cv_ptr;
+void imageCallback(const sensor_msgs::ImageConstPtr& msg)
+{
+	try
+	{
+		cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+		yolo_model.detect(cv_ptr->image);
+		imshow("yolo", cv_ptr->image);
+		waitKey(1);
+	}
+	catch (cv_bridge::Exception& e)
+	{
+		ROS_ERROR("cv_bridge exception: %s", e.what());
+	}
+}
 
 int main(int argc, char **argv)
 {
@@ -139,15 +158,19 @@ int main(int argc, char **argv)
     ros::init(argc,argv,"yolo");
 	ros::NodeHandle nh;
 	yolo = nh.advertise<dobot::object>("yolo",1);
+	image_transport::ImageTransport it(nh);
+	image_transport::Subscriber sub = it.subscribe("/camera/color/image_raw", 1, imageCallback);
+	ros::spin();
+	return 0;
 	//实时视频模式
-	YOLO yolo_model(yolo_nets[2]);
-	VideoCapture cap(0);
+	// YOLO yolo_model(yolo_nets[2]);
+	// VideoCapture cap(0);
 
-	while (1) {
-		Mat srcimg;
-		cap.read(srcimg);
-		yolo_model.detect(srcimg);
-		imshow("yolo", srcimg);
-		waitKey(50);
-	}
+	// while (1) {
+	// 	Mat srcimg;
+	// 	cap.read(srcimg);
+	// 	yolo_model.detect(srcimg);
+	// 	imshow("yolo", srcimg);
+	// 	waitKey(50);
+	// }
 }

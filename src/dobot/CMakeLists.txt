@@ -9,13 +9,18 @@ project(dobot)
 ## is used, also find other catkin packages
 ###############强烈注意此，警示后人##################
 set(OpenCV_DIR /usr/local/lib/cmake/opencv4)
+############## 配置slam修改了cvbridge因此需要重新设置dir###############
+set(cv_bridge_DIR /usr/local/share/cv_bridge/cmake)
 ################################################
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   serial
   std_msgs
+  sensor_msgs
   OpenCV REQUIRED
+  cv_bridge
+  image_transport
   message_generation
 )
 
@@ -110,7 +115,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES dobot
- CATKIN_DEPENDS roscpp rospy serial std_msgs message_runtime
+ CATKIN_DEPENDS roscpp rospy serial std_msgs message_runtime sensor_msgs cv_bridge image_transport
 #  DEPENDS system_lib
 )
 

@@ -4,6 +4,17 @@
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /home/human/dobot/devel/include/dobot/object.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /home/human/dobot/src/dobot/include/dobot/yolo.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /home/human/dobot/src/dobot/src/yolo.cpp
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/cv_bridge/cv_bridge.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/camera_publisher.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/camera_subscriber.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/exception.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/exports.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/image_transport.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/loader_fwds.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/publisher.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/single_subscriber_publisher.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/subscriber.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/image_transport/transport_hints.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/ros/assert.h
@@ -60,6 +71,12 @@ dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/ros/types.
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/ros/wall_timer.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/ros/wall_timer_options.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/sensor_msgs/CameraInfo.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/sensor_msgs/CompressedImage.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/sensor_msgs/Image.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/sensor_msgs/image_encodings.h
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core.hpp
@@ -67,6 +84,8 @@ dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/base.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/check.hpp
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/core.hpp
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/core_c.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/cv_cpu_helper.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/cvdef.h
@@ -87,6 +106,7 @@ dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/saturate.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/traits.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/types.hpp
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/types_c.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/utility.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/tls.hpp
@@ -102,7 +122,9 @@ dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/highgui.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/imgcodecs.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/imgproc.hpp
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
+dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/types_c.h
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/opencv_modules.hpp
 dobot/CMakeFiles/yolo_lib.dir/src/yolo.cpp.o: /usr/local/include/opencv4/opencv2/videoio.hpp
 
