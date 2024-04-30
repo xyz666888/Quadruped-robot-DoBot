@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+dobot/CMakeFiles/avoid.dir/rule:
+	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/avoid.dir/rule
+.PHONY : dobot/CMakeFiles/avoid.dir/rule
+
+# Convenience name for target.
+avoid: dobot/CMakeFiles/avoid.dir/rule
+
+.PHONY : avoid
+
+# fast build rule for target.
+avoid/fast:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/avoid.dir/build.make dobot/CMakeFiles/avoid.dir/build
+.PHONY : avoid/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/mytest.dir/rule:
 	cd /home/human/dobot/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/mytest.dir/rule
 .PHONY : dobot/CMakeFiles/mytest.dir/rule
@@ -857,6 +872,33 @@ src/DoBot.cpp.s:
 	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/dobot_lib.dir/build.make dobot/CMakeFiles/dobot_lib.dir/src/DoBot.cpp.s
 .PHONY : src/DoBot.cpp.s
 
+src/avoid.o: src/avoid.cpp.o
+
+.PHONY : src/avoid.o
+
+# target to build an object file
+src/avoid.cpp.o:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/avoid.dir/build.make dobot/CMakeFiles/avoid.dir/src/avoid.cpp.o
+.PHONY : src/avoid.cpp.o
+
+src/avoid.i: src/avoid.cpp.i
+
+.PHONY : src/avoid.i
+
+# target to preprocess a source file
+src/avoid.cpp.i:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/avoid.dir/build.make dobot/CMakeFiles/avoid.dir/src/avoid.cpp.i
+.PHONY : src/avoid.cpp.i
+
+src/avoid.s: src/avoid.cpp.s
+
+.PHONY : src/avoid.s
+
+# target to generate assembly for a file
+src/avoid.cpp.s:
+	cd /home/human/dobot/build && $(MAKE) -f dobot/CMakeFiles/avoid.dir/build.make dobot/CMakeFiles/avoid.dir/src/avoid.cpp.s
+.PHONY : src/avoid.cpp.s
+
 src/bridge_yolo.o: src/bridge_yolo.cpp.o
 
 .PHONY : src/bridge_yolo.o
@@ -951,6 +993,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
+	@echo "... avoid"
 	@echo "... mytest"
 	@echo "... yolo"
 	@echo "... dobot_genpy"
@@ -1001,6 +1044,9 @@ help:
 	@echo "... src/DoBot.o"
 	@echo "... src/DoBot.i"
 	@echo "... src/DoBot.s"
+	@echo "... src/avoid.o"
+	@echo "... src/avoid.i"
+	@echo "... src/avoid.s"
 	@echo "... src/bridge_yolo.o"
 	@echo "... src/bridge_yolo.i"
 	@echo "... src/bridge_yolo.s"

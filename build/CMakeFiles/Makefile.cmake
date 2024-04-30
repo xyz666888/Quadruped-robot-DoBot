@@ -252,6 +252,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "dobot/CMakeFiles/avoid.dir/DependInfo.cmake"
   "dobot/CMakeFiles/mytest.dir/DependInfo.cmake"
   "dobot/CMakeFiles/yolo.dir/DependInfo.cmake"
   "dobot/CMakeFiles/dobot_genpy.dir/DependInfo.cmake"

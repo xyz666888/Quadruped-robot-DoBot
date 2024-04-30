@@ -39,6 +39,7 @@
 /home/human/dobot/build/dobot/CMakeFiles/install.dir
 /home/human/dobot/build/dobot/CMakeFiles/list_install_components.dir
 /home/human/dobot/build/dobot/CMakeFiles/edit_cache.dir
+/home/human/dobot/build/dobot/CMakeFiles/avoid.dir
 /home/human/dobot/build/dobot/CMakeFiles/mytest.dir
 /home/human/dobot/build/dobot/CMakeFiles/yolo.dir
 /home/human/dobot/build/dobot/CMakeFiles/dobot_genpy.dir

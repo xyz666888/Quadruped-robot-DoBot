@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named avoid
+
+# Build rule for target.
+avoid: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 avoid
+.PHONY : avoid
+
+# fast build rule for target.
+avoid/fast:
+	$(MAKE) -f dobot/CMakeFiles/avoid.dir/build.make dobot/CMakeFiles/avoid.dir/build
+.PHONY : avoid/fast
+
+#=============================================================================
 # Target rules for targets named mytest
 
 # Build rule for target.
@@ -878,6 +891,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... avoid"
 	@echo "... mytest"
 	@echo "... yolo"
 	@echo "... dobot_genpy"

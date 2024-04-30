@@ -153,6 +153,7 @@ add_executable(yolo src/yolo.cpp)
 add_executable(mytest src/test.cpp)
 add_executable(DoBot src/DoBot.cpp)
 add_executable(bridge_yolo src/bridge_yolo.cpp)
+add_executable(avoid src/avoid.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -165,6 +166,7 @@ add_executable(bridge_yolo src/bridge_yolo.cpp)
 add_dependencies(yolo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(mytest ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(DoBot ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(avoid ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(bridge_yolo ${PROJECT_NAME}_gencpp)
 
 ## Specify libraries to link a library or executable target against
@@ -182,6 +184,13 @@ target_link_libraries(mytest
 target_link_libraries(bridge_yolo
   ${catkin_LIBRARIES}
 )
+
+target_link_libraries(avoid
+  ${catkin_LIBRARIES}
+  # ${OpenCV_LIBS}
+  # dobot_lib
+)
+
 target_link_libraries(DoBot
   ${catkin_LIBRARIES}
   # ${OpenCV_LIBS}

@@ -79,6 +79,7 @@ clean: dobot/clean
 # Directory level rules for directory dobot
 
 # Recursive "all" directory target.
+dobot/all: dobot/CMakeFiles/avoid.dir/all
 dobot/all: dobot/CMakeFiles/mytest.dir/all
 dobot/all: dobot/CMakeFiles/yolo.dir/all
 dobot/all: dobot/CMakeFiles/bridge_yolo.dir/all
@@ -95,6 +96,7 @@ dobot/preinstall:
 .PHONY : dobot/preinstall
 
 # Recursive "clean" directory target.
+dobot/clean: dobot/CMakeFiles/avoid.dir/clean
 dobot/clean: dobot/CMakeFiles/mytest.dir/clean
 dobot/clean: dobot/CMakeFiles/yolo.dir/clean
 dobot/clean: dobot/CMakeFiles/dobot_genpy.dir/clean
@@ -342,7 +344,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=22,23 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=24,25 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -369,7 +371,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=20,21 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=22,23 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -396,7 +398,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=26,27 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=28,29 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -423,7 +425,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=24,25 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=26,27 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -442,6 +444,62 @@ gtest: gtest/googletest/CMakeFiles/gtest.dir/rule
 gtest/googletest/CMakeFiles/gtest.dir/clean:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target dobot/CMakeFiles/avoid.dir
+
+# All Build rule for target.
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/dobot_generate_messages_eus.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/dobot_generate_messages_lisp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/dobot_generate_messages_py.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/roscpp_generate_messages_py.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/roscpp_generate_messages_eus.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/dobot_generate_messages_cpp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/std_msgs_generate_messages_py.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+dobot/CMakeFiles/avoid.dir/all: dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f dobot/CMakeFiles/avoid.dir/build.make dobot/CMakeFiles/avoid.dir/depend
+	$(MAKE) -f dobot/CMakeFiles/avoid.dir/build.make dobot/CMakeFiles/avoid.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=3,4 "Built target avoid"
+.PHONY : dobot/CMakeFiles/avoid.dir/all
+
+# Build rule for subdir invocation for target.
+dobot/CMakeFiles/avoid.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/human/dobot/build/CMakeFiles 15
+	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/avoid.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/human/dobot/build/CMakeFiles 0
+.PHONY : dobot/CMakeFiles/avoid.dir/rule
+
+# Convenience name for target.
+avoid: dobot/CMakeFiles/avoid.dir/rule
+
+.PHONY : avoid
+
+# clean rule for target.
+dobot/CMakeFiles/avoid.dir/clean:
+	$(MAKE) -f dobot/CMakeFiles/avoid.dir/build.make dobot/CMakeFiles/avoid.dir/clean
+.PHONY : dobot/CMakeFiles/avoid.dir/clean
 
 #=============================================================================
 # Target rules for target dobot/CMakeFiles/mytest.dir
@@ -480,7 +538,7 @@ dobot/CMakeFiles/mytest.dir/all: dobot/CMakeFiles/geometry_msgs_generate_message
 dobot/CMakeFiles/mytest.dir/all: dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f dobot/CMakeFiles/mytest.dir/build.make dobot/CMakeFiles/mytest.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/mytest.dir/build.make dobot/CMakeFiles/mytest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=28,29 "Built target mytest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=30,31 "Built target mytest"
 .PHONY : dobot/CMakeFiles/mytest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -537,7 +595,7 @@ dobot/CMakeFiles/yolo.dir/all: dobot/CMakeFiles/geometry_msgs_generate_messages_
 dobot/CMakeFiles/yolo.dir/all: dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f dobot/CMakeFiles/yolo.dir/build.make dobot/CMakeFiles/yolo.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/yolo.dir/build.make dobot/CMakeFiles/yolo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=30,31 "Built target yolo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=32,33 "Built target yolo"
 .PHONY : dobot/CMakeFiles/yolo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -620,7 +678,7 @@ dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/all: dobot/CMakeFiles/_dobot
 dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/all: dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=12,13 "Built target dobot_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=14,15 "Built target dobot_generate_messages_nodejs"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -649,7 +707,7 @@ dobot/CMakeFiles/dobot_generate_messages_eus.dir/all: dobot/CMakeFiles/std_msgs_
 dobot/CMakeFiles/dobot_generate_messages_eus.dir/all: dobot/CMakeFiles/_dobot_generate_messages_check_deps_object.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=7,8,9 "Built target dobot_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=9,10,11 "Built target dobot_generate_messages_eus"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -703,7 +761,7 @@ dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
 dobot/CMakeFiles/bridge_yolo.dir/all: dobot/CMakeFiles/dobot_gencpp.dir/all
 	$(MAKE) -f dobot/CMakeFiles/bridge_yolo.dir/build.make dobot/CMakeFiles/bridge_yolo.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/bridge_yolo.dir/build.make dobot/CMakeFiles/bridge_yolo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=3,4 "Built target bridge_yolo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=5,6 "Built target bridge_yolo"
 .PHONY : dobot/CMakeFiles/bridge_yolo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -867,7 +925,7 @@ dobot/CMakeFiles/dobot_generate_messages_lisp.dir/all: dobot/CMakeFiles/std_msgs
 dobot/CMakeFiles/dobot_generate_messages_lisp.dir/all: dobot/CMakeFiles/_dobot_generate_messages_check_deps_object.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_lisp.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=10,11 "Built target dobot_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=12,13 "Built target dobot_generate_messages_lisp"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1002,7 +1060,7 @@ dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
 dobot/CMakeFiles/yolo_lib.dir/all:
 	$(MAKE) -f dobot/CMakeFiles/yolo_lib.dir/build.make dobot/CMakeFiles/yolo_lib.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/yolo_lib.dir/build.make dobot/CMakeFiles/yolo_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=32,33 "Built target yolo_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=34,35 "Built target yolo_lib"
 .PHONY : dobot/CMakeFiles/yolo_lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1031,7 +1089,7 @@ dobot/CMakeFiles/dobot_generate_messages_py.dir/all: dobot/CMakeFiles/_dobot_gen
 dobot/CMakeFiles/dobot_generate_messages_py.dir/all: dobot/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make dobot/CMakeFiles/dobot_generate_messages_py.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make dobot/CMakeFiles/dobot_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=14,15,16,17 "Built target dobot_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=16,17,18,19 "Built target dobot_generate_messages_py"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1249,7 +1307,7 @@ dobot/CMakeFiles/dobot_generate_messages_cpp.dir/all: dobot/CMakeFiles/_dobot_ge
 dobot/CMakeFiles/dobot_generate_messages_cpp.dir/all: dobot/CMakeFiles/_dobot_generate_messages_check_deps_object.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_cpp.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=5,6 "Built target dobot_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=7,8 "Built target dobot_generate_messages_cpp"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1602,7 +1660,7 @@ dobot/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
 dobot/CMakeFiles/dobot_lib.dir/all:
 	$(MAKE) -f dobot/CMakeFiles/dobot_lib.dir/build.make dobot/CMakeFiles/dobot_lib.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_lib.dir/build.make dobot/CMakeFiles/dobot_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=18,19 "Built target dobot_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=20,21 "Built target dobot_lib"
 .PHONY : dobot/CMakeFiles/dobot_lib.dir/all
 
 # Build rule for subdir invocation for target.
