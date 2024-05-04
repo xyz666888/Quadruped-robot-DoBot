@@ -131,6 +131,7 @@ bridge_yolo_EXTERNAL_OBJECTS =
 /home/human/dobot/devel/lib/dobot/bridge_yolo: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/human/dobot/devel/lib/dobot/bridge_yolo: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/human/dobot/devel/lib/dobot/bridge_yolo: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/human/dobot/devel/lib/dobot/bridge_yolo: /home/human/dobot/devel/lib/libdobot_lib.so
 /home/human/dobot/devel/lib/dobot/bridge_yolo: /usr/local/lib/libopencv_imgcodecs.so.4.9.0
 /home/human/dobot/devel/lib/dobot/bridge_yolo: /usr/local/lib/libopencv_dnn.so.4.9.0
 /home/human/dobot/devel/lib/dobot/bridge_yolo: /usr/local/lib/libopencv_calib3d.so.4.9.0

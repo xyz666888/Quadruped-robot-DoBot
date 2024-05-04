@@ -3,7 +3,7 @@
 
 void DoBot::Process()
 {
-    this->Stand();
+    this->Sit();
     while (1)
     {
         if(currentState == STOP){
@@ -35,6 +35,20 @@ void DoBot::Stand()
     SendOrder(messege);
     currentState = STAND;
     ROS_INFO("current state is STAND");
+    std::cout << this->GetMessage().data;
+    // CloseSer();
+}
+
+void DoBot::Sit()
+{
+    // send order;
+    if(this->currentState == SIT)
+        return;
+    this->OpenSer();
+    uint8_t messege = sit;
+    SendOrder(messege);
+    currentState = SIT;
+    ROS_INFO("current state is SIT");
     std::cout << this->GetMessage().data;
     // CloseSer();
 }
@@ -131,6 +145,7 @@ bool DoBot::doCorrectPos(dobot::CV::Request& req, dobot::CV::Response& resp)
 }
 
 DoBot* DoBot::instance = nullptr;
+std::mutex DoBot::mutex;
 
 int main(int argc, char *argv[])
 {

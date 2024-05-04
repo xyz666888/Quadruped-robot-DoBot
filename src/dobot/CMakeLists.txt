@@ -183,6 +183,7 @@ target_link_libraries(mytest
 
 target_link_libraries(bridge_yolo
   ${catkin_LIBRARIES}
+  dobot_lib
 )
 
 target_link_libraries(avoid

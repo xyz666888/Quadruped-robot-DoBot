@@ -38,6 +38,7 @@ class DoBot
 {
 private:
     static DoBot* instance;
+    static std::mutex mutex;    // 互斥锁，防止多线程同时创建实例
 
     // ros::Subscriber sub = DOBOT.subscribe("object_location", 100, &DoBot::YOLOCallback, this);
     dobot::object obj;        // to access the visual info
@@ -75,6 +76,7 @@ public:
     {
         if (instance == nullptr)
         {
+            std::lock_guard<std::mutex> lock(mutex); // 锁定，确保线程安全
             instance = new DoBot();
         }
         return instance;
@@ -86,7 +88,12 @@ public:
     void Process();
     int32_t GetDistance();
     std_msgs::String GetMessage();
+    state getState()
+    {
+        return currentState;
+    }
     void Forward();
+    void Sit();
     void Left();
     void Right();
     void Back();
