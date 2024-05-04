@@ -55,6 +55,7 @@ include dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/progress.make
 
 dobot/CMakeFiles/dobot_generate_messages_nodejs: /home/human/dobot/devel/share/gennodejs/ros/dobot/msg/object.js
 dobot/CMakeFiles/dobot_generate_messages_nodejs: /home/human/dobot/devel/share/gennodejs/ros/dobot/srv/CV.js
+dobot/CMakeFiles/dobot_generate_messages_nodejs: /home/human/dobot/devel/share/gennodejs/ros/dobot/srv/Avoid.js
 
 
 /home/human/dobot/devel/share/gennodejs/ros/dobot/msg/object.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -67,9 +68,15 @@ dobot/CMakeFiles/dobot_generate_messages_nodejs: /home/human/dobot/devel/share/g
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from dobot/CV.srv"
 	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/human/dobot/src/dobot/srv/CV.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/share/gennodejs/ros/dobot/srv
 
+/home/human/dobot/devel/share/gennodejs/ros/dobot/srv/Avoid.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/human/dobot/devel/share/gennodejs/ros/dobot/srv/Avoid.js: /home/human/dobot/src/dobot/srv/Avoid.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from dobot/Avoid.srv"
+	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/human/dobot/src/dobot/srv/Avoid.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/share/gennodejs/ros/dobot/srv
+
 dobot_generate_messages_nodejs: dobot/CMakeFiles/dobot_generate_messages_nodejs
 dobot_generate_messages_nodejs: /home/human/dobot/devel/share/gennodejs/ros/dobot/msg/object.js
 dobot_generate_messages_nodejs: /home/human/dobot/devel/share/gennodejs/ros/dobot/srv/CV.js
+dobot_generate_messages_nodejs: /home/human/dobot/devel/share/gennodejs/ros/dobot/srv/Avoid.js
 dobot_generate_messages_nodejs: dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build.make
 
 .PHONY : dobot_generate_messages_nodejs

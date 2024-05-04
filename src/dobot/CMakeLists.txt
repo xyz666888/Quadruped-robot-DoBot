@@ -67,6 +67,7 @@ add_message_files(
 add_service_files(
    FILES
    CV.srv
+   Avoid.srv
 #   Service2.srv
 )
 
@@ -183,7 +184,6 @@ target_link_libraries(mytest
 
 target_link_libraries(bridge_yolo
   ${catkin_LIBRARIES}
-  dobot_lib
 )
 
 target_link_libraries(avoid

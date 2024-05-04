@@ -454,6 +454,32 @@ geometry_msgs_generate_messages_nodejs/fast:
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named dobot_generate_messages_cpp
+
+# Build rule for target.
+dobot_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_generate_messages_cpp
+.PHONY : dobot_generate_messages_cpp
+
+# fast build rule for target.
+dobot_generate_messages_cpp/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build
+.PHONY : dobot_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_eus
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -636,32 +662,6 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_eus
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named dobot_generate_messages_cpp
-
-# Build rule for target.
-dobot_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dobot_generate_messages_cpp
-.PHONY : dobot_generate_messages_cpp
-
-# fast build rule for target.
-dobot_generate_messages_cpp/fast:
-	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build
-.PHONY : dobot_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named dobot_geneus
 
 # Build rule for target.
@@ -779,19 +779,6 @@ _dobot_generate_messages_check_deps_object/fast:
 .PHONY : _dobot_generate_messages_check_deps_object/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
-
-# Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -842,6 +829,32 @@ geometry_msgs_generate_messages_eus: cmake_check_build_system
 geometry_msgs_generate_messages_eus/fast:
 	$(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_Avoid
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_Avoid: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_Avoid
+.PHONY : _dobot_generate_messages_check_deps_Avoid
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_Avoid/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_Avoid.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_Avoid.dir/build
+.PHONY : _dobot_generate_messages_check_deps_Avoid/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_lisp
@@ -904,6 +917,8 @@ help:
 	@echo "... dobot_gencpp"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... dobot_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... dobot_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
@@ -918,8 +933,6 @@ help:
 	@echo "... dobot_genlisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... dobot_generate_messages_cpp"
 	@echo "... dobot_geneus"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
@@ -929,11 +942,12 @@ help:
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... _dobot_generate_messages_check_deps_object"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... dobot_lib"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... _dobot_generate_messages_check_deps_Avoid"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... dobot_generate_messages"
 .PHONY : help

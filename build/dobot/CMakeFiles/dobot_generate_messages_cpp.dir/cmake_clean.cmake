@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/human/dobot/devel/include/dobot/Avoid.h"
   "/home/human/dobot/devel/include/dobot/CV.h"
   "/home/human/dobot/devel/include/dobot/object.h"
   "CMakeFiles/dobot_generate_messages_cpp"

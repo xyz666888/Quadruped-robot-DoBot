@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "dobot: 1 messages, 1 services")
+message(STATUS "dobot: 1 messages, 2 services")
 
 set(MSG_I_FLAGS "-Idobot:/home/human/dobot/src/dobot/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -27,6 +27,11 @@ add_custom_target(_dobot_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dobot" "/home/human/dobot/src/dobot/srv/CV.srv" ""
 )
 
+get_filename_component(_filename "/home/human/dobot/src/dobot/srv/Avoid.srv" NAME_WE)
+add_custom_target(_dobot_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dobot" "/home/human/dobot/src/dobot/srv/Avoid.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -47,6 +52,12 @@ _generate_srv_cpp(dobot
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dobot
 )
+_generate_srv_cpp(dobot
+  "/home/human/dobot/src/dobot/srv/Avoid.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dobot
+)
 
 ### Generating Module File
 _generate_module_cpp(dobot
@@ -63,6 +74,8 @@ add_dependencies(dobot_generate_messages dobot_generate_messages_cpp)
 get_filename_component(_filename "/home/human/dobot/src/dobot/msg/object.msg" NAME_WE)
 add_dependencies(dobot_generate_messages_cpp _dobot_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/human/dobot/src/dobot/srv/CV.srv" NAME_WE)
+add_dependencies(dobot_generate_messages_cpp _dobot_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/human/dobot/src/dobot/srv/Avoid.srv" NAME_WE)
 add_dependencies(dobot_generate_messages_cpp _dobot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -88,6 +101,12 @@ _generate_srv_eus(dobot
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dobot
 )
+_generate_srv_eus(dobot
+  "/home/human/dobot/src/dobot/srv/Avoid.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dobot
+)
 
 ### Generating Module File
 _generate_module_eus(dobot
@@ -104,6 +123,8 @@ add_dependencies(dobot_generate_messages dobot_generate_messages_eus)
 get_filename_component(_filename "/home/human/dobot/src/dobot/msg/object.msg" NAME_WE)
 add_dependencies(dobot_generate_messages_eus _dobot_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/human/dobot/src/dobot/srv/CV.srv" NAME_WE)
+add_dependencies(dobot_generate_messages_eus _dobot_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/human/dobot/src/dobot/srv/Avoid.srv" NAME_WE)
 add_dependencies(dobot_generate_messages_eus _dobot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -129,6 +150,12 @@ _generate_srv_lisp(dobot
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dobot
 )
+_generate_srv_lisp(dobot
+  "/home/human/dobot/src/dobot/srv/Avoid.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dobot
+)
 
 ### Generating Module File
 _generate_module_lisp(dobot
@@ -145,6 +172,8 @@ add_dependencies(dobot_generate_messages dobot_generate_messages_lisp)
 get_filename_component(_filename "/home/human/dobot/src/dobot/msg/object.msg" NAME_WE)
 add_dependencies(dobot_generate_messages_lisp _dobot_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/human/dobot/src/dobot/srv/CV.srv" NAME_WE)
+add_dependencies(dobot_generate_messages_lisp _dobot_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/human/dobot/src/dobot/srv/Avoid.srv" NAME_WE)
 add_dependencies(dobot_generate_messages_lisp _dobot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -170,6 +199,12 @@ _generate_srv_nodejs(dobot
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dobot
 )
+_generate_srv_nodejs(dobot
+  "/home/human/dobot/src/dobot/srv/Avoid.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dobot
+)
 
 ### Generating Module File
 _generate_module_nodejs(dobot
@@ -186,6 +221,8 @@ add_dependencies(dobot_generate_messages dobot_generate_messages_nodejs)
 get_filename_component(_filename "/home/human/dobot/src/dobot/msg/object.msg" NAME_WE)
 add_dependencies(dobot_generate_messages_nodejs _dobot_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/human/dobot/src/dobot/srv/CV.srv" NAME_WE)
+add_dependencies(dobot_generate_messages_nodejs _dobot_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/human/dobot/src/dobot/srv/Avoid.srv" NAME_WE)
 add_dependencies(dobot_generate_messages_nodejs _dobot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -211,6 +248,12 @@ _generate_srv_py(dobot
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dobot
 )
+_generate_srv_py(dobot
+  "/home/human/dobot/src/dobot/srv/Avoid.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dobot
+)
 
 ### Generating Module File
 _generate_module_py(dobot
@@ -227,6 +270,8 @@ add_dependencies(dobot_generate_messages dobot_generate_messages_py)
 get_filename_component(_filename "/home/human/dobot/src/dobot/msg/object.msg" NAME_WE)
 add_dependencies(dobot_generate_messages_py _dobot_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/human/dobot/src/dobot/srv/CV.srv" NAME_WE)
+add_dependencies(dobot_generate_messages_py _dobot_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/human/dobot/src/dobot/srv/Avoid.srv" NAME_WE)
 add_dependencies(dobot_generate_messages_py _dobot_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

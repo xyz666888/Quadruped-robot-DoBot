@@ -1,9 +1,12 @@
 #include "ros/ros.h"
 #include <sensor_msgs/Image.h>
 #include <std_msgs/Header.h>
+#include "/home/human/dobot/devel/include/dobot/Avoid.h"
+
+ros::ServiceClient client;
+dobot::Avoid da;
 void depthCallback(const sensor_msgs::ImageConstPtr& msg)
 {
-    ROS_INFO("Received depth image");
     int width = msg->width;
     int height = msg->height;
     uint16_t min_depth = std::numeric_limits<uint16_t>::max();
@@ -25,17 +28,27 @@ void depthCallback(const sensor_msgs::ImageConstPtr& msg)
 
             // ROS_INFO("Depth value at (%d, %d): %d", i % width, i / width, depth_value);
         }
-        ROS_INFO("Min depth: %d, Max depth: %d", min_depth, max_depth);
 
     }
+        // ROS_INFO("Min depth: %d, Max depth: %d", min_depth, max_depth);
     // ROS_INFO("Image encoding: %s",msg->encoding.c_str());
+    if(min_depth == 65535 && max_depth == 0)  {
+        da.request.isAvoid = 1;
+        client.call(da);
+    }
+    else {
+        da.request.isAvoid = 0;
+        client.call(da);
+    }
 }
 
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "avoid");
     ros::NodeHandle nh;
-    ros::Subscriber sub = nh.subscribe("/camera/depth/image_raw", 1000, depthCallback);
+    client = nh.serviceClient<dobot::Avoid>("avoid_distance");
+    ros::Subscriber sub = nh.subscribe("/camera/depth/image_raw", 1, depthCallback);
+    ros::service::waitForService("avoid_distance");
     ros::spin();
     return 0;
 }

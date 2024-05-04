@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/human/dobot/src/dobot/msg/object.msg"
-services_str = "/home/human/dobot/src/dobot/srv/CV.srv"
+services_str = "/home/human/dobot/src/dobot/srv/CV.srv;/home/human/dobot/src/dobot/srv/Avoid.srv"
 pkg_name = "dobot"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

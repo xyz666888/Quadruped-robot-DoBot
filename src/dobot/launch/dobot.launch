@@ -1,0 +1,9 @@
+<launch>
+  <arg name="target" default="person" />
+  <param name="target" value="$(arg target)"/>
+  <node pkg="dobot" type="yolo" name="yolo" output="screen"/>
+  <node pkg="dobot" type="bridge_yolo" name="bridge_yolo" output="screen" />
+  <node pkg="dobot" type="avoid" name="avoid" output="screen" />
+  <node pkg="dobot" type="DoBot" name="DoBot" output="screen" />
+  <include file = "$(find astra_camera)/launch/astra_pro_plus.launch" />
+</launch>

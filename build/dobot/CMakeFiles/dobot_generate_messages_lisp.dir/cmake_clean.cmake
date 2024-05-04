@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/human/dobot/devel/share/common-lisp/ros/dobot/msg/object.lisp"
+  "/home/human/dobot/devel/share/common-lisp/ros/dobot/srv/Avoid.lisp"
   "/home/human/dobot/devel/share/common-lisp/ros/dobot/srv/CV.lisp"
   "CMakeFiles/dobot_generate_messages_lisp"
 )

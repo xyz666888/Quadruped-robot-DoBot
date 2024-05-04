@@ -6,7 +6,6 @@ dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o
  /home/human/dobot/devel/include/dobot/CVRequest.h
  /home/human/dobot/devel/include/dobot/CVResponse.h
  /home/human/dobot/devel/include/dobot/object.h
- /home/human/dobot/src/dobot/include/dobot/DoBot.h
  /home/human/dobot/src/dobot/src/bridge_yolo.cpp
  /opt/ros/noetic/include/ros/advertise_options.h
  /opt/ros/noetic/include/ros/advertise_service_options.h
@@ -64,8 +63,5 @@ dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o
  /opt/ros/noetic/include/ros/wall_timer.h
  /opt/ros/noetic/include/ros/wall_timer_options.h
  /opt/ros/noetic/include/rosconsole/macros_generated.h
- /opt/ros/noetic/include/serial/serial.h
- /opt/ros/noetic/include/serial/v8stdint.h
- /opt/ros/noetic/include/std_msgs/String.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h

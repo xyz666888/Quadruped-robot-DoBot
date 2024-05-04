@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/human/dobot/devel/share/gennodejs/ros/dobot/msg/object.js"
+  "/home/human/dobot/devel/share/gennodejs/ros/dobot/srv/Avoid.js"
   "/home/human/dobot/devel/share/gennodejs/ros/dobot/srv/CV.js"
   "CMakeFiles/dobot_generate_messages_nodejs"
 )

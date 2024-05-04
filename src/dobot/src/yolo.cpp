@@ -64,7 +64,13 @@ void YOLO::postprocess(Mat& frame, const vector<Mat>& outs)   // Remove the boun
 	// Perform non maximum suppression to eliminate redundant overlapping boxes with
 	// lower confidences
 	vector<int> indices;
+	vector<int> match;
 	NMSBoxes(boxes, confidences, this->confThreshold, this->nmsThreshold, indices);
+	ros::NodeHandle nh;
+	string target;
+	if(nh.hasParam("/target")){
+		nh.getParam("target", target);
+	}
 	for (size_t i = 0; i < indices.size(); ++i)
 	{
 		int idx = indices[i];
@@ -72,9 +78,13 @@ void YOLO::postprocess(Mat& frame, const vector<Mat>& outs)   // Remove the boun
 		
 		this->drawPred(classIds[idx], confidences[idx], box.x, box.y,
 			box.x + box.width, box.y + box.height, frame);
+
+		if(classes[classIds[idx]] == target){
+			match.push_back(i);
+		}
 	}
-	if(indices.size()){
-		int idx = indices[0];
+	if(match.size()){
+		int idx = match[0];
 		Rect box = boxes[idx];
 		msg.name = this->classes[classIds[idx]];
 		msg.x = box.x + box.width/2;
@@ -157,6 +167,7 @@ int main(int argc, char **argv)
 	destroyAllWindows();*/
     ros::init(argc,argv,"yolo");
 	ros::NodeHandle nh;
+	
 	yolo = nh.advertise<dobot::object>("yolo",1);
 	image_transport::ImageTransport it(nh);
 	image_transport::Subscriber sub = it.subscribe("/camera/color/image_raw", 1, imageCallback);

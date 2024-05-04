@@ -55,6 +55,7 @@ include dobot/CMakeFiles/dobot_generate_messages_cpp.dir/progress.make
 
 dobot/CMakeFiles/dobot_generate_messages_cpp: /home/human/dobot/devel/include/dobot/object.h
 dobot/CMakeFiles/dobot_generate_messages_cpp: /home/human/dobot/devel/include/dobot/CV.h
+dobot/CMakeFiles/dobot_generate_messages_cpp: /home/human/dobot/devel/include/dobot/Avoid.h
 
 
 /home/human/dobot/devel/include/dobot/object.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -70,9 +71,17 @@ dobot/CMakeFiles/dobot_generate_messages_cpp: /home/human/dobot/devel/include/do
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from dobot/CV.srv"
 	cd /home/human/dobot/src/dobot && /home/human/dobot/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/human/dobot/src/dobot/srv/CV.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/include/dobot -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/human/dobot/devel/include/dobot/Avoid.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/human/dobot/devel/include/dobot/Avoid.h: /home/human/dobot/src/dobot/srv/Avoid.srv
+/home/human/dobot/devel/include/dobot/Avoid.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/human/dobot/devel/include/dobot/Avoid.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from dobot/Avoid.srv"
+	cd /home/human/dobot/src/dobot && /home/human/dobot/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/human/dobot/src/dobot/srv/Avoid.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/include/dobot -e /opt/ros/noetic/share/gencpp/cmake/..
+
 dobot_generate_messages_cpp: dobot/CMakeFiles/dobot_generate_messages_cpp
 dobot_generate_messages_cpp: /home/human/dobot/devel/include/dobot/object.h
 dobot_generate_messages_cpp: /home/human/dobot/devel/include/dobot/CV.h
+dobot_generate_messages_cpp: /home/human/dobot/devel/include/dobot/Avoid.h
 dobot_generate_messages_cpp: dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make
 
 .PHONY : dobot_generate_messages_cpp

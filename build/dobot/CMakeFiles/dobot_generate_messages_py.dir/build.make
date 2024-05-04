@@ -55,6 +55,7 @@ include dobot/CMakeFiles/dobot_generate_messages_py.dir/progress.make
 
 dobot/CMakeFiles/dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/_object.py
 dobot/CMakeFiles/dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_CV.py
+dobot/CMakeFiles/dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_Avoid.py
 dobot/CMakeFiles/dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/__init__.py
 dobot/CMakeFiles/dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/__init__.py
 
@@ -69,21 +70,29 @@ dobot/CMakeFiles/dobot_generate_messages_py: /home/human/dobot/devel/lib/python3
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV dobot/CV"
 	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/human/dobot/src/dobot/srv/CV.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv
 
+/home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_Avoid.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_Avoid.py: /home/human/dobot/src/dobot/srv/Avoid.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV dobot/Avoid"
+	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/human/dobot/src/dobot/srv/Avoid.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv
+
 /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/__init__.py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/_object.py
 /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/__init__.py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_CV.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for dobot"
+/home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/__init__.py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_Avoid.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for dobot"
 	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg --initpy
 
 /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/__init__.py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/_object.py
 /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/__init__.py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_CV.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for dobot"
+/home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/__init__.py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_Avoid.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python srv __init__.py for dobot"
 	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv --initpy
 
 dobot_generate_messages_py: dobot/CMakeFiles/dobot_generate_messages_py
 dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/_object.py
 dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_CV.py
+dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/_Avoid.py
 dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/msg/__init__.py
 dobot_generate_messages_py: /home/human/dobot/devel/lib/python3/dist-packages/dobot/srv/__init__.py
 dobot_generate_messages_py: dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make

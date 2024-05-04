@@ -2,37 +2,26 @@
 #include "ros/ros.h"
 #include "/home/human/dobot/devel/include/dobot/CV.h"
 #include "/home/human/dobot/devel/include/dobot/object.h"
-#include "/home/human/dobot/src/dobot/include/dobot/DoBot.h"
 
 dobot::CV dc;
 ros::ServiceClient client;
-
 void objectCallback(const dobot::object::ConstPtr& msg)
 {
-    DoBot *dobot = DoBot::getInstance();
     // ROS_INFO("Object detected: [%s] at (%d, %d)", msg->name.c_str(), msg->x, msg->y);
     int8_t round = 40;
     int16_t gap = msg->x - 320;
     if(gap > round){
-        if(dobot->getState() != LEFT){
-            dc.request.direction = 0;
-            ROS_INFO("turn left");
-            client.call(dc);
-        }
+        dc.request.direction = 0;
+        client.call(dc);
     }
     else if(gap < -round){
-        if(dobot->getState() != RIGHT){
-            dc.request.direction = 1;
-            ROS_INFO("turn right");
-            client.call(dc);
-        }
+        dc.request.direction = 1;
+        client.call(dc);
+        
     }
     else{
-        if(dobot->getState() != STOP){
-            dc.request.direction = 2;
-            ROS_INFO("STOP");
-            client.call(dc);
-        }
+        dc.request.direction = 2;
+        client.call(dc);
     }
 }
 

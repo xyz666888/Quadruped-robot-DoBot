@@ -55,6 +55,7 @@ include dobot/CMakeFiles/dobot_generate_messages_lisp.dir/progress.make
 
 dobot/CMakeFiles/dobot_generate_messages_lisp: /home/human/dobot/devel/share/common-lisp/ros/dobot/msg/object.lisp
 dobot/CMakeFiles/dobot_generate_messages_lisp: /home/human/dobot/devel/share/common-lisp/ros/dobot/srv/CV.lisp
+dobot/CMakeFiles/dobot_generate_messages_lisp: /home/human/dobot/devel/share/common-lisp/ros/dobot/srv/Avoid.lisp
 
 
 /home/human/dobot/devel/share/common-lisp/ros/dobot/msg/object.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -67,9 +68,15 @@ dobot/CMakeFiles/dobot_generate_messages_lisp: /home/human/dobot/devel/share/com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from dobot/CV.srv"
 	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/human/dobot/src/dobot/srv/CV.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/share/common-lisp/ros/dobot/srv
 
+/home/human/dobot/devel/share/common-lisp/ros/dobot/srv/Avoid.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/human/dobot/devel/share/common-lisp/ros/dobot/srv/Avoid.lisp: /home/human/dobot/src/dobot/srv/Avoid.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from dobot/Avoid.srv"
+	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/human/dobot/src/dobot/srv/Avoid.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/share/common-lisp/ros/dobot/srv
+
 dobot_generate_messages_lisp: dobot/CMakeFiles/dobot_generate_messages_lisp
 dobot_generate_messages_lisp: /home/human/dobot/devel/share/common-lisp/ros/dobot/msg/object.lisp
 dobot_generate_messages_lisp: /home/human/dobot/devel/share/common-lisp/ros/dobot/srv/CV.lisp
+dobot_generate_messages_lisp: /home/human/dobot/devel/share/common-lisp/ros/dobot/srv/Avoid.lisp
 dobot_generate_messages_lisp: dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make
 
 .PHONY : dobot_generate_messages_lisp

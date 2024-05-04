@@ -5,7 +5,6 @@ dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /home/human/dobot/devel/
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /home/human/dobot/devel/include/dobot/CVRequest.h
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /home/human/dobot/devel/include/dobot/CVResponse.h
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /home/human/dobot/devel/include/dobot/object.h
-dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /home/human/dobot/src/dobot/include/dobot/DoBot.h
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /home/human/dobot/src/dobot/src/bridge_yolo.cpp
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
@@ -63,9 +62,6 @@ dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/ros/wall_timer.h
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/ros/wall_timer_options.h
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
-dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/serial/serial.h
-dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/serial/v8stdint.h
-dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/std_msgs/String.h
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 dobot/CMakeFiles/bridge_yolo.dir/src/bridge_yolo.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
 

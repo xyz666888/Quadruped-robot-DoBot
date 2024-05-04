@@ -6,9 +6,15 @@ void DoBot::Process()
     this->Sit();
     while (1)
     {
+        // std::cout <<Avoid<<std::endl;
+        if(Avoid)
+            continue;
         if(currentState == STOP){
             this->Forward();
         }
+        if(currentState == OVER)
+            return;
+        sleep(1);
     }
 }
 void DoBot::Stop()
@@ -124,6 +130,8 @@ std_msgs::String DoBot::GetMessage()
 
 bool DoBot::doCorrectPos(dobot::CV::Request& req, dobot::CV::Response& resp)
 {
+    if(Avoid == true)
+        return true;
     int8_t direct = req.direction;
     // ROS_INFO("need correct pos");
     switch (direct)
@@ -135,6 +143,8 @@ bool DoBot::doCorrectPos(dobot::CV::Request& req, dobot::CV::Response& resp)
         this->Right();
         break;
     case 2:
+        if(currentState == FORWARD)
+        break;
         this->Stop();
         break;
     default:
@@ -142,6 +152,35 @@ bool DoBot::doCorrectPos(dobot::CV::Request& req, dobot::CV::Response& resp)
         return false;
     }
     return true;
+}
+
+bool DoBot::doAvoid_Distance(dobot::Avoid::Request& req, dobot::Avoid::Response& resp)
+{
+    int8_t isAvoid = req.isAvoid;
+    if(isAvoid && !Avoid){
+        Avoid = true;
+        this->Right();
+    }
+    else if(Avoid && !isAvoid){
+        this->Stop();
+        Avoid = false;
+    }
+    return true;
+}
+
+void DoBot::Over()
+{
+    this->OpenSer();
+    uint8_t messege = stop;
+    SendOrder(messege);
+    this->currentState = OVER;
+    std::cout<< "current state is OVER" << std::endl;
+    // CloseSer();
+}
+
+void DoBot::Exit(){
+    Over();
+    std::cout << "DoBot is exiting..." << std::endl;
 }
 
 DoBot* DoBot::instance = nullptr;
@@ -152,9 +191,13 @@ int main(int argc, char *argv[])
     ros::init(argc,argv,"DoBot");
     DoBot *dobot = DoBot::getInstance();
     std::thread t(&DoBot::Process, dobot);
-    ros::ServiceServer server = dobot->DOBOT.advertiseService<DoBot, dobot::CV::Request, dobot::CV::Response>("bridge_yolo", &DoBot::doCorrectPos, dobot);
+    ros::ServiceServer avoid = dobot->DOBOT.advertiseService<DoBot, dobot::Avoid::Request, dobot::Avoid::Response>("avoid_distance", &DoBot::doAvoid_Distance, dobot);
+    ros::ServiceServer bridge = dobot->DOBOT.advertiseService<DoBot, dobot::CV::Request, dobot::CV::Response>("bridge_yolo", &DoBot::doCorrectPos, dobot);
     ROS_INFO("ok....");
     ros::spin();
-    /* code */
+    std::cout << "ros::spin() has returned. Executing cleanup code." << std::endl;
+    dobot->Exit();
+    t.join();
+    ros::shutdown();                                                                                                         
     return 0;
 }

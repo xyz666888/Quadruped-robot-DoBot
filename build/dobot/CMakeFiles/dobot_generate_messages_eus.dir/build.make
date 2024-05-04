@@ -55,6 +55,7 @@ include dobot/CMakeFiles/dobot_generate_messages_eus.dir/progress.make
 
 dobot/CMakeFiles/dobot_generate_messages_eus: /home/human/dobot/devel/share/roseus/ros/dobot/msg/object.l
 dobot/CMakeFiles/dobot_generate_messages_eus: /home/human/dobot/devel/share/roseus/ros/dobot/srv/CV.l
+dobot/CMakeFiles/dobot_generate_messages_eus: /home/human/dobot/devel/share/roseus/ros/dobot/srv/Avoid.l
 dobot/CMakeFiles/dobot_generate_messages_eus: /home/human/dobot/devel/share/roseus/ros/dobot/manifest.l
 
 
@@ -68,13 +69,19 @@ dobot/CMakeFiles/dobot_generate_messages_eus: /home/human/dobot/devel/share/rose
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from dobot/CV.srv"
 	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/human/dobot/src/dobot/srv/CV.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/share/roseus/ros/dobot/srv
 
+/home/human/dobot/devel/share/roseus/ros/dobot/srv/Avoid.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/human/dobot/devel/share/roseus/ros/dobot/srv/Avoid.l: /home/human/dobot/src/dobot/srv/Avoid.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from dobot/Avoid.srv"
+	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/human/dobot/src/dobot/srv/Avoid.srv -Idobot:/home/human/dobot/src/dobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dobot -o /home/human/dobot/devel/share/roseus/ros/dobot/srv
+
 /home/human/dobot/devel/share/roseus/ros/dobot/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for dobot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/human/dobot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for dobot"
 	cd /home/human/dobot/build/dobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/human/dobot/devel/share/roseus/ros/dobot dobot std_msgs
 
 dobot_generate_messages_eus: dobot/CMakeFiles/dobot_generate_messages_eus
 dobot_generate_messages_eus: /home/human/dobot/devel/share/roseus/ros/dobot/msg/object.l
 dobot_generate_messages_eus: /home/human/dobot/devel/share/roseus/ros/dobot/srv/CV.l
+dobot_generate_messages_eus: /home/human/dobot/devel/share/roseus/ros/dobot/srv/Avoid.l
 dobot_generate_messages_eus: /home/human/dobot/devel/share/roseus/ros/dobot/manifest.l
 dobot_generate_messages_eus: dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make
 

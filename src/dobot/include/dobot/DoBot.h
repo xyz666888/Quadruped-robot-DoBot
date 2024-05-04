@@ -3,6 +3,7 @@
 #include <string>
 #include "/home/human/dobot/devel/include/dobot/object.h"
 #include "/home/human/dobot/devel/include/dobot/CV.h"
+#include "/home/human/dobot/devel/include/dobot/Avoid.h"
 #include <serial/serial.h>
 #include <iostream>
 #include <fcntl.h>
@@ -19,6 +20,7 @@ enum state
     LEFT,
     SIT,
     STOP,
+    OVER,
     WARN
 };
 
@@ -50,6 +52,7 @@ private:
     void OpenSer();
     void CloseSer();
     void SendOrder(uint8_t order);
+    bool Avoid = false;
     DoBot() 
     {
         ser.setPort(serialPort);
@@ -74,24 +77,22 @@ public:
     bool doCorrectPos(dobot::CV::Request& req, dobot::CV::Response& resp);
     static DoBot* getInstance()
     {
-        if (instance == nullptr)
-        {
-            std::lock_guard<std::mutex> lock(mutex); // 锁定，确保线程安全
+        if (instance == nullptr) {
+        std::lock_guard<std::mutex> lock(mutex);
+        if (instance == nullptr) { // 双重检查锁定（Double-Checked Locking）
             instance = new DoBot();
+            std::cout << "Instance created" << std::endl;
         }
-        return instance;
+    }
+    return instance;
     }
     ~DoBot()
     {
     }
 
     void Process();
-    int32_t GetDistance();
+    bool doAvoid_Distance(dobot::Avoid::Request& req, dobot::Avoid::Response& resp);
     std_msgs::String GetMessage();
-    state getState()
-    {
-        return currentState;
-    }
     void Forward();
     void Sit();
     void Left();
@@ -99,6 +100,8 @@ public:
     void Back();
     void Stand(); // do nothing and wait for the assignment
     void Stop();  
+    void Over();
+    void Exit();
 };
 
 void DoBot::OpenSer()
